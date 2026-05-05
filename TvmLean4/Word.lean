@@ -45,4 +45,9 @@ def Int257.ofInt? (n : Int) : Option Int257 :=
   else
     none
 
+/-- Display only the integer value; the proof field carries no
+    information at runtime. -/
+instance : Repr Int257 where
+  reprPrec n p := reprPrec n.val p
+
 end TvmLean4

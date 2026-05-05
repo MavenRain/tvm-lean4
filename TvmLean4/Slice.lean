@@ -30,6 +30,7 @@ structure Slice where
   cell : Cell
   dataOffset : Nat
   refOffset : Nat
+  deriving Repr
 
 /-- Shallow well-formedness for slices: offsets are within the cell's
     declared size.  Recursive sub-DAG well-formedness is added in a

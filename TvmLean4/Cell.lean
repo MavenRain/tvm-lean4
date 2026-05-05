@@ -34,6 +34,7 @@ def Cell.maxRefs : Nat := 4
     architectural caps are enforced separately by `Cell.WellFormed`. -/
 inductive Cell : Type where
   | mk (data : List Bool) (refs : List Cell)
+  deriving Repr
 
 /-- Project the bit payload of a cell. -/
 def Cell.data : Cell -> List Bool

@@ -38,6 +38,7 @@ inductive StackValue : Type where
   | tuple : List StackValue -> StackValue
   | cont : StackValue
   | null : StackValue
+  deriving Repr
 
 /-- A TVM stack, with the head of the list as the top of stack. -/
 abbrev Stack : Type := List StackValue
